@@ -1,0 +1,49 @@
+.footer {
+    background-color: #000;
+    padding: 10px 0 120px 0;
+
+    @include responsive (medium) {
+        padding-bottom: 10px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include responsive(mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        list-style: none;
+
+        @include responsive (mobile) {
+            text-align: center;
+        }
+    }
+
+    &__item {
+        margin-bottom: 13px;
+
+        &:first-child {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        @include responsive (mobile) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

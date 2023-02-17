@@ -1,0 +1,19 @@
+@mixin responsive($size) {
+    @if $size ==tablet {
+        @media (max-width: 950px) and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $size ==medium {
+        @media (max-width:950px) {
+            @content;
+        }
+    }
+
+    @if $size ==mobile {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+}

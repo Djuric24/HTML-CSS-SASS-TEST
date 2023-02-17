@@ -1,0 +1,94 @@
+.form {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @include responsive (medium) {
+        padding: 0 50px 0 0;
+    }
+
+    @include responsive (mobile) {
+        padding: 0;
+    }
+
+    &__button {
+        display: none;
+        width: 100%;
+        text-transform: uppercase;
+        padding: 10px;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        box-shadow: 6px 9px 28px -4px rgba($crna, .4);
+        cursor: pointer;
+
+        &:hover+.form__container {
+            display: flex;
+        }
+
+        &:hover {
+            display: none;
+        }
+
+        @include responsive (mobile) {
+            display: block;
+        }
+    }
+
+    &__container {
+        display: flex;
+        padding: 30px;
+        border-radius: 20px;
+        height: max-content;
+        flex-wrap: wrap;
+        width: 75%;
+        background-color: #fff;
+        justify-content: space-between;
+        gap: 20px 0;
+
+        @include responsive (medium) {
+            width: 100%;
+            gap: 20px;
+        }
+
+        @include responsive (mobile) {
+            display: none;
+        }
+    }
+
+    &__side-image {
+        width: 250px;
+        border: 3px solid #fff;
+        border-radius: 7px;
+
+        @include responsive (medium) {
+            display: none;
+        }
+    }
+
+    &__field {
+        width: 30%;
+
+        @include responsive (medium) {
+            width: calc(50% - 10px);
+        }
+    }
+
+    &__field select,
+    &__field input {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid $crna;
+    }
+
+    &__field [type="submit"] {
+        background-color: $narandzasta;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

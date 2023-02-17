@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+@import 'section';
+@import 'form';
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.wrap {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
